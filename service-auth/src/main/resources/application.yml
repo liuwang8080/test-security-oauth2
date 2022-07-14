@@ -1,9 +1,9 @@
 spring:
   application:
     name: service-auth
-
   redis:
-    host: 172.16.10.43
+    host: 10.243.1.203
+    password: 123456  ## Redis服务器连接密码（默认为空）
     database: 1
 
 

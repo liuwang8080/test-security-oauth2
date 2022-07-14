@@ -6,7 +6,11 @@
 
     <groupId>com.test.security.oauth2.demo</groupId>
     <artifactId>test-security-oauth2-demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>oauth2-jwt-server</module>
+    </modules>
 
 
 </project>
