@@ -1,9 +1,7 @@
 package com.macro.cloud.domain;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 /**
  * Created by macro on 2019/8/29.
@@ -11,6 +9,8 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Builder
+@NoArgsConstructor                 //无参构造
+@AllArgsConstructor                //有参构造
 public class User {
     @ApiModelProperty("用户ID")
     private Long id;
