@@ -14,8 +14,8 @@ spring:
   redis:
     database: 0
     port: 6379
-    host: localhost
-    password:
+    host: 10.243.1.203
+    password: 123456
 management:
   endpoints:
     web:
