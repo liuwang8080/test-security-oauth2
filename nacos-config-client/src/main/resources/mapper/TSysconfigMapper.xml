@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.macro.cloud.mapper.TSysconfigMapper">
+
+  <update id="updateByID" parameterType="java.util.Map">
+    update T_SysMenu
+    set ParentMenuID = #{parentmenuid,jdbcType=VARCHAR},
+      MenuOrder = #{menuorder,jdbcType=INTEGER},
+      MenuName_cn = #{menunameCn,jdbcType=NVARCHAR},
+      MenuName_en = #{menunameEn,jdbcType=VARCHAR},
+      MenuName = #{menuname,jdbcType=VARCHAR},
+      MenuUrl = #{menuurl,jdbcType=VARCHAR},
+      MenuIcon = #{menuicon,jdbcType=VARCHAR},
+      IsVisible = #{isvisible,jdbcType=TINYINT},
+      IsLeaf = #{isleaf,jdbcType=TINYINT}
+    where MenuID = #{menuid,jdbcType=VARCHAR}
+  </update>
+
+
+  <select id="selectALL" resultType="java.util.HashMap">
+    select * from T_SysMenu
+  </select>
+</mapper>
