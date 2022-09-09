@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 @RequestMapping("/user")
-public class UserRibbonController {
+public class  UserRibbonController {
     @Autowired
     private RestTemplate restTemplate;
     @Value("${service-url.user-service}")
