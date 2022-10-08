@@ -84,7 +84,7 @@ public class MyRedisTokenStore implements TokenStore {private static final Strin
 
 
         try {
-            bytes = conn.get(serializedKey);
+              bytes = conn.get(serializedKey);
         } finally {
             conn.close();
         }

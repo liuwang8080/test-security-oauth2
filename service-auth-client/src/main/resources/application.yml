@@ -24,9 +24,10 @@ security:
       user-info-uri: http://localhost:9098/users/current
     client:
       id: admin
+      client-id: admin
       client-secret: 123456
       access-token-uri: http://localhost:9098/oauth/token
-      grant-type: client_credentials,password
-      scope: server
+      grant-type: client_credentials
+      scope: all
 
 
