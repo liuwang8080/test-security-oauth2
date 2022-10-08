@@ -9,6 +9,7 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
 /**
  * 认证服务器配置
@@ -47,4 +48,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .scopes("all")//配置申请的权限范围
                 .authorizedGrantTypes("authorization_code","password");//配置grant_type，表示授权类型
     }
+
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        // 允许表单认证
+        security.allowFormAuthenticationForClients().tokenKeyAccess("permitAll()")
+                .checkTokenAccess("isAuthenticated()");
+    }
+
 }
